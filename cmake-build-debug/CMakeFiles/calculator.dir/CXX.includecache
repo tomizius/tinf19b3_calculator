@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thomas/CLionProjects/calculator/app/classes/calculator.cpp
+calculator.h
+/home/thomas/CLionProjects/calculator/app/classes/calculator.h
+
+/home/thomas/CLionProjects/calculator/app/classes/calculator.h
+
+/home/thomas/CLionProjects/calculator/main.cpp
+iostream
+-
+

@@ -123,6 +123,33 @@ calculator/fast:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
 
+app/classes/calculator.o: app/classes/calculator.cpp.o
+
+.PHONY : app/classes/calculator.o
+
+# target to build an object file
+app/classes/calculator.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/calculator.cpp.o
+.PHONY : app/classes/calculator.cpp.o
+
+app/classes/calculator.i: app/classes/calculator.cpp.i
+
+.PHONY : app/classes/calculator.i
+
+# target to preprocess a source file
+app/classes/calculator.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/calculator.cpp.i
+.PHONY : app/classes/calculator.cpp.i
+
+app/classes/calculator.s: app/classes/calculator.cpp.s
+
+.PHONY : app/classes/calculator.s
+
+# target to generate assembly for a file
+app/classes/calculator.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/calculator.cpp.s
+.PHONY : app/classes/calculator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... calculator"
 	@echo "... edit_cache"
+	@echo "... app/classes/calculator.o"
+	@echo "... app/classes/calculator.i"
+	@echo "... app/classes/calculator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

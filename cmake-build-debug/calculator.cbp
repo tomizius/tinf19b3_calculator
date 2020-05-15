@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/thomas/CLionProjects/calculator/app/classes/calculator.cpp">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/calculator/app/classes/calculator.h">
+			<Option target="calculator"/>
+		</Unit>
 		<Unit filename="/home/thomas/CLionProjects/calculator/main.cpp">
 			<Option target="calculator"/>
 		</Unit>

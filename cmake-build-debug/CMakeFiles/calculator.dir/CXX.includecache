@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/thomas/CLionProjects/calculator/app/classes/calculator.cpp
-calculator.h
-/home/thomas/CLionProjects/calculator/app/classes/calculator.h
-
-/home/thomas/CLionProjects/calculator/app/classes/calculator.h
-
-/home/thomas/CLionProjects/calculator/main.cpp
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.cpp
+abstractCalculator.h
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.h
+cmath
+-
 iostream
 -
+
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.h
 

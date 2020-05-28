@@ -70,29 +70,29 @@ CMakeFiles/calculator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/herrlevin_/CLionProjects/tinf19b3_calculator/main.cpp -o CMakeFiles/calculator.dir/main.cpp.s
 
-CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o: CMakeFiles/calculator.dir/flags.make
-CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o: ../app/classes/abstractCalculator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o -c /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.cpp
+CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o: CMakeFiles/calculator.dir/flags.make
+CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o: ../app/classes/Calculation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o -c /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp
 
-CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.cpp > CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.i
+CMakeFiles/calculator.dir/app/classes/Calculation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calculator.dir/app/classes/Calculation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp > CMakeFiles/calculator.dir/app/classes/Calculation.cpp.i
 
-CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/abstractCalculator.cpp -o CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.s
+CMakeFiles/calculator.dir/app/classes/Calculation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calculator.dir/app/classes/Calculation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp -o CMakeFiles/calculator.dir/app/classes/Calculation.cpp.s
 
 # Object files for target calculator
 calculator_OBJECTS = \
 "CMakeFiles/calculator.dir/main.cpp.o" \
-"CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o"
+"CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o"
 
 # External object files for target calculator
 calculator_EXTERNAL_OBJECTS =
 
 calculator: CMakeFiles/calculator.dir/main.cpp.o
-calculator: CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o
+calculator: CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o
 calculator: CMakeFiles/calculator.dir/build.make
 calculator: CMakeFiles/calculator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable calculator"

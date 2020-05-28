@@ -123,32 +123,32 @@ calculator/fast:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
 
-app/classes/abstractCalculator.o: app/classes/abstractCalculator.cpp.o
+app/classes/Calculation.o: app/classes/Calculation.cpp.o
 
-.PHONY : app/classes/abstractCalculator.o
+.PHONY : app/classes/Calculation.o
 
 # target to build an object file
-app/classes/abstractCalculator.cpp.o:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.o
-.PHONY : app/classes/abstractCalculator.cpp.o
+app/classes/Calculation.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o
+.PHONY : app/classes/Calculation.cpp.o
 
-app/classes/abstractCalculator.i: app/classes/abstractCalculator.cpp.i
+app/classes/Calculation.i: app/classes/Calculation.cpp.i
 
-.PHONY : app/classes/abstractCalculator.i
+.PHONY : app/classes/Calculation.i
 
 # target to preprocess a source file
-app/classes/abstractCalculator.cpp.i:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.i
-.PHONY : app/classes/abstractCalculator.cpp.i
+app/classes/Calculation.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/Calculation.cpp.i
+.PHONY : app/classes/Calculation.cpp.i
 
-app/classes/abstractCalculator.s: app/classes/abstractCalculator.cpp.s
+app/classes/Calculation.s: app/classes/Calculation.cpp.s
 
-.PHONY : app/classes/abstractCalculator.s
+.PHONY : app/classes/Calculation.s
 
 # target to generate assembly for a file
-app/classes/abstractCalculator.cpp.s:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/abstractCalculator.cpp.s
-.PHONY : app/classes/abstractCalculator.cpp.s
+app/classes/Calculation.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/Calculation.cpp.s
+.PHONY : app/classes/Calculation.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... calculator"
-	@echo "... app/classes/abstractCalculator.o"
-	@echo "... app/classes/abstractCalculator.i"
-	@echo "... app/classes/abstractCalculator.s"
+	@echo "... app/classes/Calculation.o"
+	@echo "... app/classes/Calculation.i"
+	@echo "... app/classes/Calculation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

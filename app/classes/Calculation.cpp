@@ -6,28 +6,20 @@
 #include <cmath>
 #include <iostream>
 
-class Calculation {
-private:
-    const char * expressionToParse;
-
-public:
-    const char *operators;
-
-
 //get the current character
-private: char peek()
+char Calculation::peek()
 {
     return *this->expressionToParse;
 }
 
 //progress through the string
-private: char get()
+char Calculation::get()
 {
     return *this->expressionToParse++;
 }
 
 //get the current number
-private: double number()
+double Calculation::number()
 {
     double result = this->get() - '0'; // subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
     while (this->peek() >= '0' && this->peek() <= '9') {
@@ -37,7 +29,7 @@ private: double number()
 }
 
 //get the current factor (for equations with *, /, ^, r)
-private: double factor()
+double Calculation::factor()
 {
     if (this->peek() >= '0' && this->peek() <= '9') {
         return this->number();
@@ -54,7 +46,7 @@ private: double factor()
     return NAN; // error
 }
 
-private: double expression()
+double Calculation::expression()
 {
     double result = this->factor();
     while (this->peek() == '*' || this->peek() == '/' || this->peek() == ':' || this->peek() == '^' || this->peek() == 'r') {
@@ -85,7 +77,7 @@ private: double expression()
     return result;
 }
 
-private: double equation()
+double Calculation::equation()
 {
     double result = this->expression();
     while (this->peek() == '+' || this->peek() == '-') {
@@ -100,10 +92,10 @@ private: double equation()
     return result;
 }
 
-public: double Calculate(char *equ)
+double Calculation::Calculate(char *equ)
 {
     this->expressionToParse = equ;
     return this->equation();
 }
-};
+
 

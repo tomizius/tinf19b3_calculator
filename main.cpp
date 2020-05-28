@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cmath>
-#include "app/classes/Calculation.cpp"
+#include "app/classes/Calculation.h"
 
 using namespace std;
 

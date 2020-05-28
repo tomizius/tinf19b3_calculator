@@ -4,7 +4,6 @@
 CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o: ../app/classes/Calculation.cpp
 CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o: ../app/classes/Calculation.h
 
-CMakeFiles/calculator.dir/main.cpp.o: ../app/classes/Calculation.cpp
 CMakeFiles/calculator.dir/main.cpp.o: ../app/classes/Calculation.h
 CMakeFiles/calculator.dir/main.cpp.o: ../main.cpp
 

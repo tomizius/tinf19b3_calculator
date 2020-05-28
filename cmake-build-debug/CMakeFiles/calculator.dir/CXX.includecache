@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp
-Calculation.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
-cmath
--
-iostream
--
-string
--
-
 /home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
 iostream
 -
@@ -25,6 +15,6 @@ iostream
 -
 cmath
 -
-app/classes/Calculation.cpp
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp
+app/classes/Calculation.h
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
 

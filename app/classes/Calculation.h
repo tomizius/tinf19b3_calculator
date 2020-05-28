@@ -8,8 +8,18 @@
 
 #include <iostream>
 
-class asdf {
+class Calculation {
+private:
+    const char * expressionToParse;
+    char peek();
+    char get();
+    double number();
+    double factor();
+    double expression();
+    double equation();
 
+public:
+    double Calculate(char *equ);
 };
 
 

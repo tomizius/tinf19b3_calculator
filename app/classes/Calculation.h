@@ -10,19 +10,19 @@
 class Calculation {
 private:
     const char * expressionToParse;
-    const char * calculationString;
+    char * calculationString;
     char currentChar();
     char nextChar();
     double number();
     double factor();
-    double expression();
     double equation();
+    double equate();
     double endResult;
 
 public:
-    char getFullCalculationString();
+    char * getFullCalculationString();
     double getResult();
-    double calculate(char *userInput);
+    Calculation(char *userInput);
 };
 
 #endif //CALCULATOR_CALCULATION_H

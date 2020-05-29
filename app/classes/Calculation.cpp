@@ -6,11 +6,21 @@
 #include <cmath>
 #include <iostream>
 
-double Calculation::calculate(char *userInput)
+Calculation::Calculation(char *userInput)
 {
     this->expressionToParse = userInput;
-    return this->equation();
+    this->calculationString = userInput;
+    this->endResult = this->equate();
 }
+
+double Calculation::getResult() {
+    return this->endResult;
+}
+
+char * Calculation::getFullCalculationString() {
+    return this->calculationString;
+}
+
 
 //get the current character
 char Calculation::currentChar()
@@ -41,7 +51,7 @@ double Calculation::factor()
         return this->number();
     } else if (this->currentChar() == '(') {
         this->nextChar(); // '('
-        double result = this->equation();
+        double result = this->equate();
         this->nextChar(); // ')'
         return result;
     } else if (this->currentChar() == '-') {
@@ -52,7 +62,7 @@ double Calculation::factor()
     return NAN; // error
 }
 
-double Calculation::expression()
+double Calculation::equation()
 {
     double result = this->factor();
     while (this->currentChar() == '*' || this->currentChar() == '/' || this->currentChar() == ':' || this->currentChar() == '^' || this->currentChar() == 'r') {
@@ -83,23 +93,17 @@ double Calculation::expression()
     return result;
 }
 
-double Calculation::equation()
+double Calculation::equate()
 {
-    double result = this->expression();
+    double result = this->equation();
     while (this->currentChar() == '+' || this->currentChar() == '-') {
         if (this->nextChar() == '+') {
-            result += this->expression();
+            result += this->equation();
 
         } else {
-            result -= this->expression();
+            result -= this->equation();
         }
     }
 
     return result;
-}
-
-double Calculation::calculate(char *userInput)
-{
-    this->expressionToParse = userInput;
-    return this->equation();
 }

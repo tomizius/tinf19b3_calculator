@@ -92,9 +92,9 @@ double Calculation::equation()
     return result;
 }
 
-double Calculation::Calculate(char *equ)
+double Calculation::Calculate(char *userInput)
 {
-    this->expressionToParse = equ;
+    this->expressionToParse = userInput;
     return this->equation();
 }
 

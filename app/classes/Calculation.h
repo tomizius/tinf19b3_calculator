@@ -19,7 +19,7 @@ private:
     double equation();
 
 public:
-    double Calculate(char *equ);
+    double Calculate(char *userInput);
 };
 
 

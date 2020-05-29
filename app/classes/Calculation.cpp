@@ -6,14 +6,20 @@
 #include <cmath>
 #include <iostream>
 
+double Calculation::calculate(char *userInput)
+{
+    this->expressionToParse = userInput;
+    return this->equation();
+}
+
 //get the current character
-char Calculation::peek()
+char Calculation::currentChar()
 {
     return *this->expressionToParse;
 }
 
 //progress through the string
-char Calculation::get()
+char Calculation::nextChar()
 {
     return *this->expressionToParse++;
 }
@@ -21,9 +27,9 @@ char Calculation::get()
 //get the current number
 double Calculation::number()
 {
-    double result = this->get() - '0'; // subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
-    while (this->peek() >= '0' && this->peek() <= '9') {
-        result = 10*result + this->get() - '0';
+    double result = this->nextChar() - '0'; // subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
+    while (this->currentChar() >= '0' && this->currentChar() <= '9') {
+        result = 10*result + this->nextChar() - '0';
     }
     return result;
 }
@@ -31,15 +37,15 @@ double Calculation::number()
 //get the current factor (for equations with *, /, ^, r)
 double Calculation::factor()
 {
-    if (this->peek() >= '0' && this->peek() <= '9') {
+    if (this->currentChar() >= '0' && this->currentChar() <= '9') {
         return this->number();
-    } else if (this->peek() == '(') {
-        this->get(); // '('
+    } else if (this->currentChar() == '(') {
+        this->nextChar(); // '('
         double result = this->equation();
-        this->get(); // ')'
+        this->nextChar(); // ')'
         return result;
-    } else if (this->peek() == '-') {
-        this->get();
+    } else if (this->currentChar() == '-') {
+        this->nextChar();
         return -this->factor();
     }
 
@@ -49,15 +55,15 @@ double Calculation::factor()
 double Calculation::expression()
 {
     double result = this->factor();
-    while (this->peek() == '*' || this->peek() == '/' || this->peek() == ':' || this->peek() == '^' || this->peek() == 'r') {
-        char operand = this->get();
+    while (this->currentChar() == '*' || this->currentChar() == '/' || this->currentChar() == ':' || this->currentChar() == '^' || this->currentChar() == 'r') {
+        char operand = this->nextChar();
         double fac = this->factor();
 
         if (operand == '*') {
             result *= fac;
         } else if (operand == '^') {
             result = ::std::pow(result,fac);
-        } else if (operand == '/' || this->peek() == ':') {
+        } else if (operand == '/' || this->currentChar() == ':') {
             // if division by 0 return error
             if (fac == 0) {
                 std::cerr << "Division by zero is not allowed!" << std::endl;
@@ -80,8 +86,8 @@ double Calculation::expression()
 double Calculation::equation()
 {
     double result = this->expression();
-    while (this->peek() == '+' || this->peek() == '-') {
-        if (this->get() == '+') {
+    while (this->currentChar() == '+' || this->currentChar() == '-') {
+        if (this->nextChar() == '+') {
             result += this->expression();
 
         } else {
@@ -92,10 +98,8 @@ double Calculation::equation()
     return result;
 }
 
-double Calculation::Calculate(char *userInput)
+double Calculation::calculate(char *userInput)
 {
     this->expressionToParse = userInput;
     return this->equation();
 }
-
-

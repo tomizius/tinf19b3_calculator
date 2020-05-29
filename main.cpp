@@ -16,7 +16,7 @@ int main()
         char input[50];
         cin.getline(input, 50);
 
-        result = c.Calculate(input);
+        result = c.calculate(input);
         cout << "Result is: " << result << endl;
     }
 

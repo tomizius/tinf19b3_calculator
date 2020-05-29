@@ -7,21 +7,22 @@
 
 
 #include <iostream>
-
 class Calculation {
 private:
     const char * expressionToParse;
-    char peek();
-    char get();
+    const char * calculationString;
+    char currentChar();
+    char nextChar();
     double number();
     double factor();
     double expression();
     double equation();
+    double endResult;
 
 public:
-    double Calculate(char *userInput);
+    char getFullCalculationString();
+    double getResult();
+    double calculate(char *userInput);
 };
-
-
 
 #endif //CALCULATOR_CALCULATION_H

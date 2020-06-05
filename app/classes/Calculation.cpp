@@ -8,17 +8,17 @@
 
 Calculation::Calculation(char *userInput)
 {
-    this->expressionToParse = userInput;
-    this->calculationString = userInput;
-    this->endResult = this->equate();
+    expressionToParse = userInput;
+    calculationString.assign(userInput);
+    endResult = this->equate();
 }
 
 double Calculation::getResult() {
-    return this->endResult;
+    return endResult;
 }
 
-char * Calculation::getFullCalculationString() {
-    return this->calculationString;
+std::string Calculation::getFullCalculationString() {
+    return calculationString;
 }
 
 

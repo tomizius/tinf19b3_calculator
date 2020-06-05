@@ -1,16 +1,11 @@
-//
-// Created by thomas on 15.05.20.
-//
-
 #ifndef CALCULATOR_CALCULATION_H
 #define CALCULATOR_CALCULATION_H
-
 
 #include <iostream>
 class Calculation {
 private:
     const char * expressionToParse;
-    char * calculationString;
+    std::string calculationString;
     char currentChar();
     char nextChar();
     double number();
@@ -20,7 +15,7 @@ private:
     double endResult;
 
 public:
-    char * getFullCalculationString();
+    std::string getFullCalculationString();
     double getResult();
     Calculation(char *userInput);
 };

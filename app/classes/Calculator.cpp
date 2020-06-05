@@ -1,14 +1,10 @@
-//
-// Created by thomas on 05.06.20.
-//
-
 #include "Calculator.h"
-#include <iostream>
-
+//so far i think we dont need this
+/*
 Calculation Calculator::getHistory(int i){
 
 };
-
+*/
 std::vector<Calculation> Calculator::getFullHistory(){
     return history;
 };

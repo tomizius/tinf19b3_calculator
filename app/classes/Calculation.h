@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-/* $Header: /CounterStrike/BUILDING.H 1     3/03/97 10:24a Joe_bostic $ */
+/* $Header: /app/classes/Calculation.h  */
 /***********************************************************************************************
  *                                                                                             *
  *                 Project Name : Calculator                                          *

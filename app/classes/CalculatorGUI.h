@@ -4,6 +4,7 @@
 
 #include <QtWidgets>
 #include "../ui/calculator.h"
+#include "Calculator.h"
 
 #ifndef CALCULATOR_CALCULATORGUI_H
 #define CALCULATOR_CALCULATORGUI_H
@@ -19,17 +20,13 @@ public:
 
 private:
     Ui::Form *ui;
+    Calculator calc;
+    bool m_equated = false;
 
 
 private slots:
     void decimalClicked();
-/*    void commaClicked();
-    void additionClicked();
-    void divisionClicked();
-    void subtractionClicked();
-    void multiplicationClicked();
-    void rootClicked();
-    void expClicked();
     void equalClicked();
+/*    void commaClicked();
     void clearClicked();*/
 };

@@ -4,6 +4,7 @@
 
 #include "CalculatorGUI.h"
 #include "../ui/calculator.h"
+#include "Calculator.h"
 #include <QtWidgets>
 #include <QDebug>
 #include <iostream>
@@ -23,6 +24,14 @@ CalculatorGUI::CalculatorGUI(QWidget *parent)
     connect(ui->button7, SIGNAL(released()), this, SLOT(decimalClicked()));
     connect(ui->button8, SIGNAL(released()), this, SLOT(decimalClicked()));
     connect(ui->button9, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonSQRT, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonEXP, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonDivision, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonMultiply, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonSubtract, SIGNAL(released()), this, SLOT(decimalClicked()));
+    connect(ui->buttonAdd, SIGNAL(released()), this, SLOT(decimalClicked()));
+
+    connect(ui->buttonResult, SIGNAL(released()), this, SLOT(equalClicked()));
 
 }
 
@@ -32,10 +41,40 @@ CalculatorGUI::~CalculatorGUI() {
 
 void CalculatorGUI::decimalClicked() {
     QPushButton * button = (QPushButton*)sender();
+    QString textEditString = ui->textEdit->toPlainText();
+    QString buttonString = button->text();
+    bool ok;
+    buttonString.toDouble(&ok);
 
-    QString textEditString;
+    qDebug() << textEditString;
+    qDebug() << buttonString;
+    qDebug() << "Equated: " << m_equated;
+    qDebug() << "Number: " << ok;
 
-    textEditString = (ui->textEdit->toPlainText() + button->text());
+    if (m_equated == true && ok) {
+        textEditString = "";
+    }
+
+    m_equated = false;
+
+    buttonString = buttonString == "÷" ? "/" : buttonString;
+    buttonString = buttonString == "√" ? "r" : buttonString;
+    buttonString = buttonString == "×" ? "*" : buttonString;
+
+    textEditString = textEditString + buttonString;
 
     ui->textEdit->setText(textEditString);
+}
+
+void CalculatorGUI::equalClicked() {
+
+    qDebug() << "=";
+
+    QString inputStr = ui->textEdit->toPlainText();
+    QByteArray inputBa = inputStr.toLocal8Bit();
+    char *c_InputStr = inputBa.data();
+
+    Calculation m_calculation = calc.calculation(c_InputStr);
+    ui->textEdit->setText(QString::number(m_calculation.getResult()));
+    m_equated = true;
 }

@@ -1,6 +1,24 @@
-//
-// Created by thomas on 15.05.20.
-//
+/* $Header: /app/classes/Calculation.cpp  */
+/***********************************************************************************************
+ *                                                                                             *
+ *                 Project Name : Calculator                                                   *
+ *                                                                                             *
+ *                    File Name : Calculation.cpp                                              *
+ *                                                                                             *
+ *                   Programmer : Levin Baumann & Thomas Englert                               *
+ *                                                                                             *
+ *---------------------------------------------------------------------------------------------*
+ * Functions:                                                                                  *
+ *   Calculation::Calculation -- The constructor set all responsible variables for the history *
+ *   Calculation::getResult -- Determines the region from a specified cell number              *
+ *   Calculation::getFullCalculationString -- returns full string of a calculation             *
+ *   Calculation::currentChar -- returns a pointer to the current char of the user input       *
+ *   Calculation::nextChar -- returns a pointer to the next char of the user input             *
+ *   Calculation::number -- return us the digit, which we need for the calculation logic       *
+ *   Calculation::factor -- returnS the operation character, like -, +, /, etc                 *
+ *   Calculation::equation -- returns us the result of factor() and number()                   *
+ *   Calculation::equate -- starts the equation for us and returns the result                  +
+ */
 
 #include "Calculation.h"
 #include <cmath>

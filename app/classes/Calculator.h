@@ -1,3 +1,16 @@
+/* $Header: /app/classes/Calculator.h  */
+/***********************************************************************************************
+ *                                                                                             *
+ *                 Project Name : Calculator                                                   *
+ *                                                                                             *
+ *                    File Name : Calculator.h                                                *
+ *                                                                                             *
+ *                   Programmer : Levin Baumann & Thomas Englert                               *
+ *                                                                                             *
+ *---------------------------------------------------------------------------------------------*
+ * Functions:                                                                                  *
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 #ifndef CALCULATOR_CALCULATOR_H
 #define CALCULATOR_CALCULATOR_H
 
@@ -7,6 +20,9 @@
 
 class Calculator {
 private:
+    /*
+     * in this variable we store all objects of a Calculation
+     */
     std::vector<Calculation> history;
 
 public:

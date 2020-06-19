@@ -40,9 +40,12 @@ private slots:
     void decimalClicked();
 
     /*
-     * startts the calcu
+     * starts the calculation
      */
     void equalClicked();
-//    void commaClicked();
+
+    /*
+     * Celars the display of the current calculation
+     */
     void clearClicked();
 };

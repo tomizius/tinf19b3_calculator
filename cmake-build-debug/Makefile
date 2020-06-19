@@ -123,6 +123,19 @@ calculator/fast:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
 
+#=============================================================================
+# Target rules for targets named calculator_autogen
+
+# Build rule for target.
+calculator_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calculator_autogen
+.PHONY : calculator_autogen
+
+# fast build rule for target.
+calculator_autogen/fast:
+	$(MAKE) -f CMakeFiles/calculator_autogen.dir/build.make CMakeFiles/calculator_autogen.dir/build
+.PHONY : calculator_autogen/fast
+
 app/classes/Calculation.o: app/classes/Calculation.cpp.o
 
 .PHONY : app/classes/Calculation.o
@@ -177,6 +190,60 @@ app/classes/Calculator.cpp.s:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/Calculator.cpp.s
 .PHONY : app/classes/Calculator.cpp.s
 
+app/classes/CalculatorGUI.o: app/classes/CalculatorGUI.cpp.o
+
+.PHONY : app/classes/CalculatorGUI.o
+
+# target to build an object file
+app/classes/CalculatorGUI.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.o
+.PHONY : app/classes/CalculatorGUI.cpp.o
+
+app/classes/CalculatorGUI.i: app/classes/CalculatorGUI.cpp.i
+
+.PHONY : app/classes/CalculatorGUI.i
+
+# target to preprocess a source file
+app/classes/CalculatorGUI.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.i
+.PHONY : app/classes/CalculatorGUI.cpp.i
+
+app/classes/CalculatorGUI.s: app/classes/CalculatorGUI.cpp.s
+
+.PHONY : app/classes/CalculatorGUI.s
+
+# target to generate assembly for a file
+app/classes/CalculatorGUI.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.s
+.PHONY : app/classes/CalculatorGUI.cpp.s
+
+calculator_autogen/mocs_compilation.o: calculator_autogen/mocs_compilation.cpp.o
+
+.PHONY : calculator_autogen/mocs_compilation.o
+
+# target to build an object file
+calculator_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.o
+.PHONY : calculator_autogen/mocs_compilation.cpp.o
+
+calculator_autogen/mocs_compilation.i: calculator_autogen/mocs_compilation.cpp.i
+
+.PHONY : calculator_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+calculator_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.i
+.PHONY : calculator_autogen/mocs_compilation.cpp.i
+
+calculator_autogen/mocs_compilation.s: calculator_autogen/mocs_compilation.cpp.s
+
+.PHONY : calculator_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+calculator_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.s
+.PHONY : calculator_autogen/mocs_compilation.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -213,12 +280,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... calculator"
 	@echo "... edit_cache"
+	@echo "... calculator_autogen"
 	@echo "... app/classes/Calculation.o"
 	@echo "... app/classes/Calculation.i"
 	@echo "... app/classes/Calculation.s"
 	@echo "... app/classes/Calculator.o"
 	@echo "... app/classes/Calculator.i"
 	@echo "... app/classes/Calculator.s"
+	@echo "... app/classes/CalculatorGUI.o"
+	@echo "... app/classes/CalculatorGUI.i"
+	@echo "... app/classes/CalculatorGUI.s"
+	@echo "... calculator_autogen/mocs_compilation.o"
+	@echo "... calculator_autogen/mocs_compilation.i"
+	@echo "... calculator_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

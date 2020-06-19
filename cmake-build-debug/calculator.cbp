@@ -5,7 +5,7 @@
 		<Option title="calculator"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
@@ -34,6 +34,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/include"/>
+					<Add directory="/usr/include/qt"/>
+					<Add directory="/usr/include/qt/QtWidgets"/>
+					<Add directory="/usr/include/qt/QtGui"/>
+					<Add directory="/usr/include/qt/QtCore"/>
+					<Add directory="/usr/lib/qt/mkspecs/linux-g++"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward"/>
@@ -56,6 +65,15 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/include"/>
+					<Add directory="/usr/include/qt"/>
+					<Add directory="/usr/include/qt/QtWidgets"/>
+					<Add directory="/usr/include/qt/QtGui"/>
+					<Add directory="/usr/include/qt/QtCore"/>
+					<Add directory="/usr/lib/qt/mkspecs/linux-g++"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward"/>
@@ -81,6 +99,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="calculator_autogen">
+				<Option working_dir="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 calculator_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp">
 			<Option target="calculator"/>
@@ -94,11 +122,161 @@
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h">
 			<Option target="calculator"/>
 		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.cpp">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/app/ui/calculator.ui">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/mocs_compilation.cpp">
+			<Option target="calculator"/>
+		</Unit>
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/main.cpp">
 			<Option target="calculator"/>
 		</Unit>
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Core\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

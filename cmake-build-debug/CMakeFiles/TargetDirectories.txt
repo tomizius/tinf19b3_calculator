@@ -1,3 +1,4 @@
 /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/calculator.dir
 /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/calculator_autogen.dir

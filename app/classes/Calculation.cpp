@@ -76,7 +76,7 @@ double Calculation::factor()
         this->nextChar();
         return -this->factor();
     }
-
+    //fixme we wanna have exceptions here
     return NAN; // error
 }
 
@@ -95,6 +95,7 @@ double Calculation::equation()
             // if division by 0 return error
             if (fac == 0) {
                 std::cerr << "Division by zero is not allowed!" << std::endl;
+                //fixme we wanna have exceptions here
                 return NAN;
             }
             result /= fac;
@@ -102,6 +103,7 @@ double Calculation::equation()
             // if division by 0 return error
             if (result == 0) {
                 std::cerr << "Exponent cannot be zero!" << std::endl;
+                //fixme we wanna have exceptions here
                 return NAN;
             }
             result = ::std::pow(fac, 1 / result);

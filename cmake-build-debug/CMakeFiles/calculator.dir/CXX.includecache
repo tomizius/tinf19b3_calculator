@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp
-Calculation.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
-cmath
--
-iostream
--
-
 /home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
 iostream
 -
@@ -60,34 +52,6 @@ QtWidgets/QPushButton
 QtWidgets/QTextEdit
 -
 QtWidgets/QWidget
--
-
-/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/GEAK3ZTPJU/moc_CalculatorGUI.cpp
-memory
--
-../../../app/classes/CalculatorGUI.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/mocs_compilation.cpp
-GEAK3ZTPJU/moc_CalculatorGUI.cpp
-/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/GEAK3ZTPJU/moc_CalculatorGUI.cpp
-
-/home/thomas/CLionProjects/tinf19b3_calculator/main.cpp
-iostream
--
-app/classes/Calculator.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
-app/classes/Calculation.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
-app/classes/CalculatorGUI.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
-QApplication
--
-QDebug
 -
 
 /usr/include/qt/QtCore/QDeadlineTimer

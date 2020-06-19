@@ -45,6 +45,6 @@ private:
 private slots:
     void decimalClicked();
     void equalClicked();
-/*    void commaClicked();
-    void clearClicked();*/
+//    void commaClicked();
+    void clearClicked();
 };

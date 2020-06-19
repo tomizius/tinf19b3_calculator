@@ -13,6 +13,7 @@
  *   CalculatorGUI::~CalculatorGUI -- deletion of the GUI                                      *
  *   CalculatorGUI::decimalClicked -- recognize decimal clicks in the GUI                      *
  *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something           *
+ *   CalculatorGUI::clearClicked -- clears the display                                         *
  *   CalculationGUI:: --            *
  */
 
@@ -44,6 +45,8 @@ CalculatorGUI::CalculatorGUI(QWidget *parent)
     connect(ui->buttonMultiply, SIGNAL(released()), this, SLOT(decimalClicked()));
     connect(ui->buttonSubtract, SIGNAL(released()), this, SLOT(decimalClicked()));
     connect(ui->buttonAdd, SIGNAL(released()), this, SLOT(decimalClicked()));
+
+    connect(ui->buttonClear, SIGNAL(released()), this, SLOT(clearClicked()));
 
     connect(ui->buttonResult, SIGNAL(released()), this, SLOT(equalClicked()));
 
@@ -91,4 +94,11 @@ void CalculatorGUI::equalClicked() {
     Calculation m_calculation = calc.calculation(c_InputStr);
     ui->textEdit->setText(QString::number(m_calculation.getResult()));
     m_equated = true;
+}
+
+void CalculatorGUI::clearClicked(){
+    qDebug() << "AC";
+
+    ui->textEdit->setText("");
+
 }

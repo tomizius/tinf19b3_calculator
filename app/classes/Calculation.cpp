@@ -17,7 +17,7 @@
  *   Calculation::number -- return us the digit, which we need for the calculation logic       *
  *   Calculation::factor -- returnS the operation character, like -, +, /, etc                 *
  *   Calculation::equation -- returns us the result of factor() and number()                   *
- *   Calculation::equate -- starts the equation for us and returns the result                  +
+ *   Calculation::equate -- starts the equation for us and returns the result                  *
  */
 
 #include "Calculation.h"

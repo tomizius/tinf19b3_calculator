@@ -1,6 +1,20 @@
-//
-// Created by herrlevin_ on 6/12/20.
-//
+/* $Header: /app/classes/CalculatorGUI.cpp  */
+/***********************************************************************************************
+ *                                                                                             *
+ *                 Project Name : CalculatorGUI                                                *
+ *                                                                                             *
+ *                    File Name : CalculatorGUI.cpp                                            *
+ *                                                                                             *
+ *                   Programmer : Levin Baumann & Thomas Englert                               *
+ *                                                                                             *
+ *---------------------------------------------------------------------------------------------*
+ * Functions:                                                                                  *
+ *   CalculatorGUI::CalculatorGUI -- Connection between GUI (QT5) and backend, implements click*
+ *   CalculatorGUI::~CalculatorGUI -- deletion of the GUI                                      *
+ *   CalculatorGUI::decimalClicked -- recognize decimal clicks in the GUI                      *
+ *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something           *
+ *   CalculationGUI:: --            *
+ */
 
 #include "CalculatorGUI.h"
 #include "../ui/calculator.h"

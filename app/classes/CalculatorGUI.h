@@ -9,16 +9,7 @@
  *                                                                                             *
  *---------------------------------------------------------------------------------------------*
  * Functions:                                                                                  *
- *   Calculation::Calculation -- The constructor set all responsible variables for the history *
- *   Calculation::getResult -- Determines the region from a specified cell number              *
- *   Calculation::getFullCalculationString -- returns full string of a calculation             *
- *   Calculation::currentChar -- returns a pointer to the current char of the user input       *
- *   Calculation::nextChar -- returns a pointer to the next char of the user input             *
- *   Calculation::number -- return us the digit, which we need for the calculation logic       *
- *   Calculation::factor -- returnS the operation character, like -, +, /, etc                 *
- *   Calculation::equation -- returns us the result of factor() and number()                   *
- *   Calculation::equate -- starts the equation for us and returns the result                  *
- */
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include <QtWidgets>
 #include "../ui/calculator.h"
@@ -43,7 +34,14 @@ private:
 
 
 private slots:
+    /*
+     * recognize decimal (0-9) clicks in the GUI and forward them to the backend if needed
+     */
     void decimalClicked();
+
+    /*
+     * startts the calcu
+     */
     void equalClicked();
 //    void commaClicked();
     void clearClicked();

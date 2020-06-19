@@ -15,7 +15,7 @@
  *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something           *
  *   CalculatorGUI::clearClicked -- clears the display                                         *
  *   CalculationGUI:: --            *
- */
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "CalculatorGUI.h"
 #include "../ui/calculator.h"
@@ -91,8 +91,12 @@ void CalculatorGUI::equalClicked() {
     QByteArray inputBa = inputStr.toLocal8Bit();
     char *c_InputStr = inputBa.data();
 
+    /*
+     * starts the calculation in the backend of the Calculator
+     */
     Calculation m_calculation = calc.calculation(c_InputStr);
     ui->textEdit->setText(QString::number(m_calculation.getResult()));
+
     m_equated = true;
 }
 

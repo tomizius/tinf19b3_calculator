@@ -18,7 +18,7 @@
  *   Calculation::factor -- returnS the operation character, like -, +, /, etc                 *
  *   Calculation::equation -- returns us the result of factor() and number()                   *
  *   Calculation::equate -- starts the equation for us and returns the result                  *
- */
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "Calculation.h"
 #include <cmath>
@@ -113,6 +113,7 @@ double Calculation::equation()
     return result;
 }
 
+//starts the calculation
 double Calculation::equate()
 {
     double result = this->equation();

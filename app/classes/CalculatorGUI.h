@@ -48,4 +48,9 @@ private slots:
      * Celars the display of the current calculation
      */
     void clearClicked();
+    
+    /*
+     * function gets always the last history of the calculation
+     */
+    void getLastHistory();
 };

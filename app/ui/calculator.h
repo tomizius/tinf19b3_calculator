@@ -45,6 +45,8 @@ public:
     QPushButton *buttonBracketOpen;
     QPushButton *buttonBracketClose;
     QTextEdit *textHistory;
+    QPushButton *buttonHistoryUp;
+    QPushButton *buttonHistoryDown;
 
     void setupUi(QWidget *Form)
     {
@@ -130,7 +132,13 @@ public:
         buttonBracketClose->setGeometry(QRect(160, 200, 41, 41));
         textHistory = new QTextEdit(Form);
         textHistory->setObjectName(QString::fromUtf8("textHistory"));
-        textHistory->setGeometry(QRect(120, 10, 131, 41));
+        textHistory->setGeometry(QRect(110, 10, 141, 41));
+        buttonHistoryUp = new QPushButton(Form);
+        buttonHistoryUp->setObjectName(QString::fromUtf8("buttonHistoryUp"));
+        buttonHistoryUp->setGeometry(QRect(10, 10, 41, 41));
+        buttonHistoryDown = new QPushButton(Form);
+        buttonHistoryDown->setObjectName(QString::fromUtf8("buttonHistoryDown"));
+        buttonHistoryDown->setGeometry(QRect(60, 10, 41, 41));
 
         retranslateUi(Form);
 
@@ -162,6 +170,8 @@ public:
         buttonEXP->setText(QCoreApplication::translate("Form", "^", nullptr));
         buttonBracketOpen->setText(QCoreApplication::translate("Form", "(", nullptr));
         buttonBracketClose->setText(QCoreApplication::translate("Form", ")", nullptr));
+        buttonHistoryUp->setText(QCoreApplication::translate("Form", "\342\206\221", nullptr));
+        buttonHistoryDown->setText(QCoreApplication::translate("Form", "\342\206\223", nullptr));
     } // retranslateUi
 
 };

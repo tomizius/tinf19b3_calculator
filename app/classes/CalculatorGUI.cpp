@@ -14,7 +14,7 @@
  *   CalculatorGUI::decimalClicked -- recognize decimal clicks in the GUI                      *
  *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something           *
  *   CalculatorGUI::clearClicked -- clears the display                                         *
- *   CalculationGUI:: --            *
+ *   CalculationGUI:: --                                        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "CalculatorGUI.h"
@@ -97,7 +97,13 @@ void CalculatorGUI::equalClicked() {
     Calculation m_calculation = calc.calculation(c_InputStr);
     ui->textEdit->setText(QString::number(m_calculation.getResult()));
 
+
+
     m_equated = true;
+}
+
+void CalculatorGUI::getLastHistoryAndPrintIt(){
+
 }
 
 void CalculatorGUI::clearClicked(){

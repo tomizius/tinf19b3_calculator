@@ -1,4 +1,4 @@
-/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thomas/CLionProjects/tinf19b3_calculator
+/opt/Clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thomas/CLionProjects/tinf19b3_calculator
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug

@@ -52,5 +52,5 @@ private slots:
     /*
      * function gets always the last history of the calculation
      */
-    void getLastHistory();
+    void getLastHistoryAndPrintIt();
 };

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/calculator_autogen.dir/AutogenOldSettings.txt"
+  "CMakeFiles/calculator_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/calculator_autogen.dir/ParseCache.txt"
   "calculator_autogen"
   "CMakeFiles/calculator.dir/app/classes/Calculation.cpp.o"

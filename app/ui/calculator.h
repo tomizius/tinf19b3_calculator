@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -44,15 +45,15 @@ public:
     QPushButton *buttonEXP;
     QPushButton *buttonBracketOpen;
     QPushButton *buttonBracketClose;
-    QTextEdit *textHistory;
-    QPushButton *buttonHistoryUp;
-    QPushButton *buttonHistoryDown;
+    QListWidget *listHistory;
 
     void setupUi(QWidget *Form)
     {
         if (Form->objectName().isEmpty())
             Form->setObjectName(QString::fromUtf8("Form"));
-        Form->resize(260, 346);
+        Form->resize(262, 355);
+        Form->setMinimumSize(QSize(262, 355));
+        Form->setMaximumSize(QSize(262, 355));
         QIcon icon;
         QString iconThemeName = QString::fromUtf8("SP_FileDialogListView");
         if (QIcon::hasThemeIcon(iconThemeName)) {
@@ -130,15 +131,10 @@ public:
         buttonBracketClose = new QPushButton(Form);
         buttonBracketClose->setObjectName(QString::fromUtf8("buttonBracketClose"));
         buttonBracketClose->setGeometry(QRect(160, 200, 41, 41));
-        textHistory = new QTextEdit(Form);
-        textHistory->setObjectName(QString::fromUtf8("textHistory"));
-        textHistory->setGeometry(QRect(110, 10, 141, 41));
-        buttonHistoryUp = new QPushButton(Form);
-        buttonHistoryUp->setObjectName(QString::fromUtf8("buttonHistoryUp"));
-        buttonHistoryUp->setGeometry(QRect(10, 10, 41, 41));
-        buttonHistoryDown = new QPushButton(Form);
-        buttonHistoryDown->setObjectName(QString::fromUtf8("buttonHistoryDown"));
-        buttonHistoryDown->setGeometry(QRect(60, 10, 41, 41));
+        listHistory = new QListWidget(Form);
+        listHistory->setObjectName(QString::fromUtf8("listHistory"));
+        listHistory->setGeometry(QRect(10, 10, 241, 41));
+        listHistory->setAcceptDrops(true);
 
         retranslateUi(Form);
 
@@ -170,8 +166,6 @@ public:
         buttonEXP->setText(QCoreApplication::translate("Form", "^", nullptr));
         buttonBracketOpen->setText(QCoreApplication::translate("Form", "(", nullptr));
         buttonBracketClose->setText(QCoreApplication::translate("Form", ")", nullptr));
-        buttonHistoryUp->setText(QCoreApplication::translate("Form", "\342\206\221", nullptr));
-        buttonHistoryDown->setText(QCoreApplication::translate("Form", "\342\206\223", nullptr));
     } // retranslateUi
 
 };

@@ -12,7 +12,8 @@
  *   CalculatorGUI::CalculatorGUI -- Connection between GUI (QT5) and backend, implements click*
  *   CalculatorGUI::~CalculatorGUI -- deletion of the GUI                                      *
  *   CalculatorGUI::decimalClicked -- recognize decimal clicks in the GUI                      *
- *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something           *
+ *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something and prints*
+ *                                  history in ListWidget                                      *
  *   CalculatorGUI::clearClicked -- clears the display                                         *
  *   CalculationGUI:: --                                        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -97,12 +98,17 @@ void CalculatorGUI::equalClicked() {
     Calculation m_calculation = calc.calculation(c_InputStr);
     ui->textEdit->setText(QString::number(m_calculation.getResult()));
 
+    /*
+     * adds item to list history
+     */
 
+    ui->listHistory->addItem(QString::fromStdString(m_calculation.getFullCalculationString() + "=" ) + QString::number(m_calculation.getResult()));
+    ui->listHistory->scrollToBottom();
 
     m_equated = true;
 }
 
-void CalculatorGUI::getLastHistoryAndPrintIt(){
+void CalculatorGUI::getLastHistoryAndPrintIt() {
 
 }
 

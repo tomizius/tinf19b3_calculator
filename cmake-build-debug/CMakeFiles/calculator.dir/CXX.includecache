@@ -47,6 +47,8 @@ QtGui/QIcon
 -
 QtWidgets/QApplication
 -
+QtWidgets/QListWidget
+-
 QtWidgets/QPushButton
 -
 QtWidgets/QTextEdit
@@ -3609,6 +3611,10 @@ qcommonstyle.h
 /usr/include/qt/QtWidgets/QLayout
 qlayout.h
 /usr/include/qt/QtWidgets/qlayout.h
+
+/usr/include/qt/QtWidgets/QListWidget
+qlistwidget.h
+/usr/include/qt/QtWidgets/qlistwidget.h
 
 /usr/include/qt/QtWidgets/QPushButton
 qpushbutton.h

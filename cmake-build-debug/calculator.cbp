@@ -27,6 +27,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="calculator">
 				<Option output="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
@@ -84,16 +94,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 calculator/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -237,18 +237,6 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
 		</Unit>
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
-		</Unit>
-		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
-		</Unit>
-		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
-		</Unit>
-		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
-		</Unit>
-		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\Qt5Gui\"/>
 		</Unit>
 		<Unit filename="/home/thomas/CLionProjects/tinf19b3_calculator/../../../../usr/lib64/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">

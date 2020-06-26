@@ -37,7 +37,7 @@ private slots:
     /*
      * recognize decimal (0-9) clicks in the GUI and forward them to the backend if needed
      */
-    void decimalClicked();
+    void stringButtonClicked();
 
     /*
      * starts the calculation
@@ -48,9 +48,9 @@ private slots:
      * Celars the display of the current calculation
      */
     void clearClicked();
-    
+
     /*
-     * function gets always the last history of the calculation
+     * changes the prefix of the whole calculation string
      */
-    void getLastHistoryAndPrintIt();
+    void prefixChange();
 };

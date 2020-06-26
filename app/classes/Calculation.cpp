@@ -52,12 +52,26 @@ char Calculation::nextChar()
     return *this->expressionToParse++;
 }
 
+double Calculation::decimal() {
+    double cnt = 10;
+    double test = this->nextChar() - '0';
+    double result = test / cnt;
+    while (this->currentChar() >= '0' && this->currentChar() <= '9' ) {
+        result = result + (this->nextChar() - '0') / cnt;
+        cnt *= 10;
+    }
+    return result;
+}
+
 //get the current number
 double Calculation::number()
 {
-    double result = this->nextChar() - '0'; // subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
-    while (this->currentChar() >= '0' && this->currentChar() <= '9') {
-        result = 10*result + this->nextChar() - '0';
+    double result = this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
+    while (this->currentChar() >= '0' && this->currentChar() <= '9' || this->currentChar() == ',') {
+        if (this->nextChar() == ',') {
+            this->decimal();
+        }
+        result = 10*result + this->currentChar() - '0';
     }
     return result;
 }
@@ -65,7 +79,7 @@ double Calculation::number()
 //get the current factor (for equations with *, /, ^, r)
 double Calculation::factor()
 {
-    if (this->currentChar() >= '0' && this->currentChar() <= '9') {
+    if (this->currentChar() >= '0' && this->currentChar() <= '9' || this->currentChar() == ',') {
         return this->number();
     } else if (this->currentChar() == '(') {
         this->nextChar(); // '('

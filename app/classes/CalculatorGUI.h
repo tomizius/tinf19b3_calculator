@@ -35,7 +35,7 @@ private:
 
 private slots:
     /*
-     * recognize decimal (0-9) clicks in the GUI and forward them to the backend if needed
+     * recognize button (example: 0-9) clicks in the GUI and forward them to the backend if needed
      */
     void stringButtonClicked();
 

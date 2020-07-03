@@ -11,11 +11,11 @@
  * Functions:                                                                                  *
  *   CalculatorGUI::CalculatorGUI -- Connection between GUI (QT5) and backend, implements click*
  *   CalculatorGUI::~CalculatorGUI -- deletion of the GUI                                      *
- *   CalculatorGUI::stringButtonClicked -- recognize decimal clicks in the GUI                 *
+ *   CalculatorGUI::stringButtonClicked -- recognize button clicks in the GUI                  *
  *   CalculatorGUI::equalClicked -- recognize the equal click to calculate something and prints*
  *                                  history in ListWidget                                      *
  *   CalculatorGUI::clearClicked -- clears the display                                         *
- *   CalculationGUI::prefixChange -- changes the prefix of the whole calculation string         *
+ *   CalculationGUI::prefixChange -- changes the prefix of the whole calculation string        *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 #include "CalculatorGUI.h"

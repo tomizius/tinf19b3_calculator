@@ -26,7 +26,8 @@ private:
     std::vector<Calculation> history;
 
 public:
-    //Calculation getHistory(int i);
+    //fixme maybe we need this function
+    // Calculation getHistory(int i);
     std::vector<Calculation> getFullHistory();
     Calculation calculation(char *userInput);
 };

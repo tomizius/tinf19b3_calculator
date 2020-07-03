@@ -1,11 +1,21 @@
 #include <iostream>
 #include "app/classes/Calculator.h"
 #include "app/classes/Calculation.h"
+#include "app/classes/CalculatorGUI.h"
+#include <QApplication>
+#include <QDebug>
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
+    QApplication app(argc, argv);
+
+    CalculatorGUI addressBook;
+    addressBook.show();
+
+    return app.exec();
+
     double result;
     std::string equation;
 

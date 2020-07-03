@@ -6,27 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
-iostream
--
-
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.cpp
-Calculator.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
-
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
-iostream
--
-vector
--
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp
 Calculation.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
-
-/home/thomas/CLionProjects/tinf19b3_calculator/main.cpp
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
+cmath
+-
 iostream
 -
-app/classes/Calculator.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
-app/classes/Calculation.h
-/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
+
+/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
+iostream
+-
 

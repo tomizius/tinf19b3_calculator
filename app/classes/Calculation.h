@@ -47,6 +47,7 @@ private:
     char currentChar();
     char nextChar();
     double number();
+    double decimal();
     double factor();
     double equation();
     double equate();

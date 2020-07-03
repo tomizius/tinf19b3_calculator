@@ -14,10 +14,12 @@
  *   Calculation::getFullCalculationString -- returns full string of a calculation             *
  *   Calculation::currentChar -- returns a pointer to the current char of the user input       *
  *   Calculation::nextChar -- returns a pointer to the next char of the user input             *
- *   Calculation::number -- return us the digit, which we need for the calculation logic       *
- *   Calculation::factor -- returnS the operation character, like -, +, /, etc                 *
+ *   Calculation::decimal -- returns the decimals after the ','                                *
+ *   Calculation::number -- returns the decimals before the ','                                *
+ *   Calculation::factor -- returns the operation character, like -, +, /, etc                 *
  *   Calculation::equation -- returns us the result of factor() and number()                   *
- *   Calculation::equate -- starts the equation for us and returns the result                  +
+ *   Calculation::equate -- starts the equation for us and returns the result                  *
+ *---------------------------------------------------------------------------------------------*
  */
 
 #include "Calculation.h"
@@ -52,12 +54,28 @@ char Calculation::nextChar()
     return *this->expressionToParse++;
 }
 
+//get the current decimals after the ','
+double Calculation::decimal() {
+    double cnt = 10;
+    this->nextChar();
+    double result = 0;
+    while (this->currentChar() >= '0' && this->currentChar() <= '9' ) {
+        result = result + (this->currentChar() - '0') / cnt;
+        cnt *= 10;
+        this->nextChar();
+    }
+    return result;
+}
+
 //get the current number
 double Calculation::number()
 {
-    double result = this->nextChar() - '0'; // subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
+    double result = this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
     while (this->currentChar() >= '0' && this->currentChar() <= '9') {
         result = 10*result + this->nextChar() - '0';
+    }
+    if (this->currentChar() == ',') {
+        result += this->decimal();
     }
     return result;
 }
@@ -65,7 +83,7 @@ double Calculation::number()
 //get the current factor (for equations with *, /, ^, r)
 double Calculation::factor()
 {
-    if (this->currentChar() >= '0' && this->currentChar() <= '9') {
+    if (this->currentChar() >= '0' && this->currentChar() <= '9' || this->currentChar() == ',') {
         return this->number();
     } else if (this->currentChar() == '(') {
         this->nextChar(); // '('
@@ -76,7 +94,7 @@ double Calculation::factor()
         this->nextChar();
         return -this->factor();
     }
-
+    //fixme we wanna have exceptions here
     return NAN; // error
 }
 
@@ -95,6 +113,7 @@ double Calculation::equation()
             // if division by 0 return error
             if (fac == 0) {
                 std::cerr << "Division by zero is not allowed!" << std::endl;
+                //fixme we wanna have exceptions here
                 return NAN;
             }
             result /= fac;
@@ -102,6 +121,7 @@ double Calculation::equation()
             // if division by 0 return error
             if (result == 0) {
                 std::cerr << "Exponent cannot be zero!" << std::endl;
+                //fixme we wanna have exceptions here
                 return NAN;
             }
             result = ::std::pow(fac, 1 / result);
@@ -111,6 +131,7 @@ double Calculation::equation()
     return result;
 }
 
+//starts the calculation
 double Calculation::equate()
 {
     double result = this->equation();

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/Clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/herrlevin_/.opt/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/Clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/herrlevin_/.opt/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thomas/CLionProjects/tinf19b3_calculator
+CMAKE_SOURCE_DIR = /home/herrlevin_/CLionProjects/tinf19b3_calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug
+CMAKE_BINARY_DIR = /home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-de
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/Clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/herrlevin_/.opt/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/Clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/herrlevin_/.opt/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles /home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thomas/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,19 +122,6 @@ calculator: cmake_check_build_system
 calculator/fast:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
-
-#=============================================================================
-# Target rules for targets named calculator_autogen
-
-# Build rule for target.
-calculator_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 calculator_autogen
-.PHONY : calculator_autogen
-
-# fast build rule for target.
-calculator_autogen/fast:
-	$(MAKE) -f CMakeFiles/calculator_autogen.dir/build.make CMakeFiles/calculator_autogen.dir/build
-.PHONY : calculator_autogen/fast
 
 app/classes/Calculation.o: app/classes/Calculation.cpp.o
 
@@ -190,60 +177,6 @@ app/classes/Calculator.cpp.s:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/Calculator.cpp.s
 .PHONY : app/classes/Calculator.cpp.s
 
-app/classes/CalculatorGUI.o: app/classes/CalculatorGUI.cpp.o
-
-.PHONY : app/classes/CalculatorGUI.o
-
-# target to build an object file
-app/classes/CalculatorGUI.cpp.o:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.o
-.PHONY : app/classes/CalculatorGUI.cpp.o
-
-app/classes/CalculatorGUI.i: app/classes/CalculatorGUI.cpp.i
-
-.PHONY : app/classes/CalculatorGUI.i
-
-# target to preprocess a source file
-app/classes/CalculatorGUI.cpp.i:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.i
-.PHONY : app/classes/CalculatorGUI.cpp.i
-
-app/classes/CalculatorGUI.s: app/classes/CalculatorGUI.cpp.s
-
-.PHONY : app/classes/CalculatorGUI.s
-
-# target to generate assembly for a file
-app/classes/CalculatorGUI.cpp.s:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/app/classes/CalculatorGUI.cpp.s
-.PHONY : app/classes/CalculatorGUI.cpp.s
-
-calculator_autogen/mocs_compilation.o: calculator_autogen/mocs_compilation.cpp.o
-
-.PHONY : calculator_autogen/mocs_compilation.o
-
-# target to build an object file
-calculator_autogen/mocs_compilation.cpp.o:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.o
-.PHONY : calculator_autogen/mocs_compilation.cpp.o
-
-calculator_autogen/mocs_compilation.i: calculator_autogen/mocs_compilation.cpp.i
-
-.PHONY : calculator_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-calculator_autogen/mocs_compilation.cpp.i:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.i
-.PHONY : calculator_autogen/mocs_compilation.cpp.i
-
-calculator_autogen/mocs_compilation.s: calculator_autogen/mocs_compilation.cpp.s
-
-.PHONY : calculator_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-calculator_autogen/mocs_compilation.cpp.s:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.s
-.PHONY : calculator_autogen/mocs_compilation.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -280,19 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... calculator"
-	@echo "... calculator_autogen"
 	@echo "... app/classes/Calculation.o"
 	@echo "... app/classes/Calculation.i"
 	@echo "... app/classes/Calculation.s"
 	@echo "... app/classes/Calculator.o"
 	@echo "... app/classes/Calculator.i"
 	@echo "... app/classes/Calculator.s"
-	@echo "... app/classes/CalculatorGUI.o"
-	@echo "... app/classes/CalculatorGUI.i"
-	@echo "... app/classes/CalculatorGUI.s"
-	@echo "... calculator_autogen/mocs_compilation.o"
-	@echo "... calculator_autogen/mocs_compilation.i"
-	@echo "... calculator_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

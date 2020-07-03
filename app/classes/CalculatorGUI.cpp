@@ -78,7 +78,6 @@ void CalculatorGUI::stringButtonClicked() {
     if (m_equated == true && ok) {
         textEditString = "";
     }
-
     m_equated = false;
 
     buttonString = buttonString == "÷" ? "/" : buttonString;
@@ -146,4 +145,12 @@ void CalculatorGUI::prefixChange() {
     }
 
     ui->textEdit->setText(textEditString);
+}
+
+void CalculatorGUI::keyReleaseEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return)
+    {
+        this->equalClicked();
+    }
 }

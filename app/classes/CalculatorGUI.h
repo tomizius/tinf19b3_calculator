@@ -32,6 +32,8 @@ private:
     Calculator calc;
     bool m_equated = false;
 
+protected:
+    void keyReleaseEvent(QKeyEvent *event);
 
 private slots:
     /*

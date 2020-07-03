@@ -47,6 +47,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/include"/>
 					<Add directory="/usr/include/qt"/>
 					<Add directory="/usr/include/qt/QtWidgets"/>
 					<Add directory="/usr/include/qt/QtGui"/>
@@ -77,6 +78,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/include"/>
 					<Add directory="/usr/include/qt"/>
 					<Add directory="/usr/include/qt/QtWidgets"/>
 					<Add directory="/usr/include/qt/QtGui"/>
@@ -97,6 +99,16 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="calculator_autogen">
+				<Option working_dir="/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 calculator_autogen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.cpp">
 			<Option target="calculator"/>
@@ -108,6 +120,18 @@
 			<Option target="calculator"/>
 		</Unit>
 		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.cpp">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/ui/calculator.ui">
+			<Option target="calculator"/>
+		</Unit>
+		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/cmake-build-debug/calculator_autogen/mocs_compilation.cpp">
 			<Option target="calculator"/>
 		</Unit>
 		<Unit filename="/home/herrlevin_/CLionProjects/tinf19b3_calculator/main.cpp">

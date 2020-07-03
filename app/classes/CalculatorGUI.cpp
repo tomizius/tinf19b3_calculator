@@ -22,6 +22,7 @@
 #include "../ui/calculator.h"
 #include "Calculator.h"
 #include <QtWidgets>
+#include <QMessageBox>
 #include <QDebug>
 #include <iostream>
 
@@ -100,16 +101,29 @@ void CalculatorGUI::equalClicked() {
     /*
      * starts the calculation in the backend of the Calculator
      */
-    Calculation m_calculation = calc.calculation(c_InputStr);
-    qDebug() << m_calculation.getResult();
-    ui->textEdit->setText(QString::number(m_calculation.getResult()));
+    try{
+        Calculation m_calculation = calc.calculation(c_InputStr);
+        qDebug() << m_calculation.getResult();
+        ui->textEdit->setText(QString::number(m_calculation.getResult()));
 
-    /*
-     * adds item to list history
-     */
+        /*
+         * adds item to list history
+         */
 
-    ui->listHistory->addItem(QString::fromStdString(m_calculation.getFullCalculationString() + "=" ) + QString::number(m_calculation.getResult(), 'g', 6));
-    ui->listHistory->scrollToBottom();
+        ui->listHistory->addItem(QString::fromStdString(m_calculation.getFullCalculationString() + "=" ) + QString::number(m_calculation.getResult(), 'g', 6));
+        ui->listHistory->scrollToBottom();
+    } catch(const std::invalid_argument exception) {
+        ui->textEdit->setText("ERROR");
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error: Invalid argument", exception.what());
+        messageBox.setFixedSize(500,200);
+    } catch(const std::overflow_error exception) {
+        ui->textEdit->setText("ERROR");
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error: Overflow Error", exception.what());
+        messageBox.setFixedSize(500,200);
+    }
+
 
     m_equated = true;
 }

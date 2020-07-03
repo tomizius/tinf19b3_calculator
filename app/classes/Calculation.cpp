@@ -94,8 +94,7 @@ double Calculation::factor()
         this->nextChar();
         return -this->factor();
     }
-    //fixme we wanna have exceptions here
-    return NAN; // error
+    throw std::invalid_argument("Non acceptable character supplied.");
 }
 
 double Calculation::equation()
@@ -113,16 +112,14 @@ double Calculation::equation()
             // if division by 0 return error
             if (fac == 0) {
                 std::cerr << "Division by zero is not allowed!" << std::endl;
-                //fixme we wanna have exceptions here
-                return NAN;
+                throw std::overflow_error("Division by zero is not allowed!");
             }
             result /= fac;
         } else if (operand == 'r') {
             // if division by 0 return error
             if (result == 0) {
                 std::cerr << "Exponent cannot be zero!" << std::endl;
-                //fixme we wanna have exceptions here
-                return NAN;
+                throw std::overflow_error("The Exponent cannot be zero!");
             }
             result = ::std::pow(fac, 1 / result);
         }
@@ -134,6 +131,8 @@ double Calculation::equation()
 //starts the calculation
 double Calculation::equate()
 {
+
+
     double result = this->equation();
     while (this->currentChar() == '+' || this->currentChar() == '-') {
         if (this->nextChar() == '+') {

@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
 iostream
 -
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
 iostream
 -
 vector
 -
 Calculation.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculation.h
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.cpp
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.cpp
 CalculatorGUI.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
 ../ui/calculator.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
 Calculator.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
 QtWidgets
 -
 QMessageBox
@@ -34,15 +34,15 @@ QDebug
 iostream
 -
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/CalculatorGUI.h
 QtWidgets
 -
 ../ui/calculator.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
 Calculator.h
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/classes/Calculator.h
 
-/home/herrlevin_/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
+/home/thomas/CLionProjects/tinf19b3_calculator/app/ui/calculator.h
 QtCore/QVariant
 -
 QtGui/QIcon

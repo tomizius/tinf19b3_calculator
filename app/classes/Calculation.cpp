@@ -20,14 +20,21 @@
  *   Calculation::equation -- returns us the result of factor() and number()                   *
  *   Calculation::equate -- starts the equation for us and returns the result                  *
  *---------------------------------------------------------------------------------------------*
+ *   General functionality of the recursion for the functions , decimal, number, factor,       *
+ *   equation and equate:                                                                      *
+ *                                                                                             *
+ *   Firstly we start with the equate method to evaluate the prefix.                           *
+ *   Second we access the equation method to calculate the point calculation                   *
+ *   One Level deeper we evaluate the brackets and dash calculation. This also accesses the    *
+ *   number function. The number and the decimal function returns us the digits as numbers.    *
+ *---------------------------------------------------------------------------------------------*
  */
 
 #include "Calculation.h"
 #include <cmath>
 #include <iostream>
 
-Calculation::Calculation(char *userInput)
-{
+Calculation::Calculation(char *userInput) {
     expressionToParse = userInput;
     calculationString.assign(userInput);
     endResult = this->equate();
@@ -43,14 +50,12 @@ std::string Calculation::getFullCalculationString() {
 
 
 //get the current character
-char Calculation::currentChar()
-{
+char Calculation::currentChar() {
     return *this->expressionToParse;
 }
 
 //progress through the string
-char Calculation::nextChar()
-{
+char Calculation::nextChar() {
     return *this->expressionToParse++;
 }
 
@@ -59,7 +64,7 @@ double Calculation::decimal() {
     double cnt = 10;
     this->nextChar();
     double result = 0;
-    while (this->currentChar() >= '0' && this->currentChar() <= '9' ) {
+    while (this->currentChar() >= '0' && this->currentChar() <= '9') {
         result = result + (this->currentChar() - '0') / cnt;
         cnt *= 10;
         this->nextChar();
@@ -68,11 +73,11 @@ double Calculation::decimal() {
 }
 
 //get the current number
-double Calculation::number()
-{
-    double result = this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
+double Calculation::number() {
+    double result =
+            this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
     while (this->currentChar() >= '0' && this->currentChar() <= '9') {
-        result = 10*result + this->nextChar() - '0';
+        result = 10 * result + this->nextChar() - '0';
     }
     if (this->currentChar() == ',') {
         result += this->decimal();
@@ -81,8 +86,7 @@ double Calculation::number()
 }
 
 //get the current factor (for equations with *, /, ^, r)
-double Calculation::factor()
-{
+double Calculation::factor() {
     if (this->currentChar() >= '0' && this->currentChar() <= '9' || this->currentChar() == ',') {
         return this->number();
     } else if (this->currentChar() == '(') {
@@ -97,17 +101,17 @@ double Calculation::factor()
     throw std::invalid_argument("Non acceptable character supplied.");
 }
 
-double Calculation::equation()
-{
+double Calculation::equation() {
     double result = this->factor();
-    while (this->currentChar() == '*' || this->currentChar() == '/' || this->currentChar() == ':' || this->currentChar() == '^' || this->currentChar() == 'r') {
+    while (this->currentChar() == '*' || this->currentChar() == '/' || this->currentChar() == ':' ||
+           this->currentChar() == '^' || this->currentChar() == 'r') {
         char operand = this->nextChar();
         double fac = this->factor();
 
         if (operand == '*') {
             result *= fac;
         } else if (operand == '^') {
-            result = ::std::pow(result,fac);
+            result = ::std::pow(result, fac);
         } else if (operand == '/' || this->currentChar() == ':') {
             // if division by 0 return error
             if (fac == 0) {
@@ -124,24 +128,18 @@ double Calculation::equation()
             result = ::std::pow(fac, 1 / result);
         }
     }
-
     return result;
 }
 
 //starts the calculation
-double Calculation::equate()
-{
-
-
+double Calculation::equate() {
     double result = this->equation();
     while (this->currentChar() == '+' || this->currentChar() == '-') {
         if (this->nextChar() == '+') {
             result += this->equation();
-
         } else {
             result -= this->equation();
         }
     }
-
     return result;
 }

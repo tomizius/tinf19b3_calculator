@@ -31,6 +31,10 @@ CalculatorGUI::CalculatorGUI(QWidget *parent)
     {
     ui->setupUi(this);
 
+    /*
+     * Gui definition
+     */
+
     connect(ui->button0, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button1, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button2, SIGNAL(released()), this, SLOT(stringButtonClicked()));

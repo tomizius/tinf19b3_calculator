@@ -9,7 +9,7 @@
  *                                                                                             *
  *---------------------------------------------------------------------------------------------*
  * Functions:                                                                                  *
- *   Calculation::Calculation -- The constructor set all responsible variables for the history *
+ *   Calculation::Calculation -- The constructor set all variables for the calculation         *
  *   Calculation::getResult -- Determines the region from a specified cell number              *
  *   Calculation::getFullCalculationString -- returns full string of a calculation             *
  *   Calculation::currentChar -- returns a pointer to the current char of the user input       *
@@ -22,8 +22,8 @@
  *---------------------------------------------------------------------------------------------*
  *   General functionality of the recursion for the functions , decimal, number, factor,       *
  *   equation and equate:                                                                      *
- *                                                                                             *
- *   Firstly we start with the equate method to evaluate the prefix.                           *
+ *
+ *   Firstly we start with the equate method in the constructor to evaluate the prefix.        *
  *   Second we access the equation method to calculate the point calculation                   *
  *   One Level deeper we evaluate the brackets and dash calculation. This also accesses the    *
  *   number function. The number and the decimal function returns us the digits as numbers.    *
@@ -49,12 +49,10 @@ std::string Calculation::getFullCalculationString() {
 }
 
 
-//get the current character
 char Calculation::currentChar() {
     return *this->expressionToParse;
 }
 
-//progress through the string
 char Calculation::nextChar() {
     return *this->expressionToParse++;
 }
@@ -74,8 +72,7 @@ double Calculation::decimal() {
 
 //get the current number
 double Calculation::number() {
-    double result =
-            this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
+    double result = this->nextChar() - '0';// subtract 0 as string, to correct the ascii-value to the corresponding doubleeger
     while (this->currentChar() >= '0' && this->currentChar() <= '9') {
         result = 10 * result + this->nextChar() - '0';
     }
@@ -108,19 +105,20 @@ double Calculation::equation() {
         char operand = this->nextChar();
         double fac = this->factor();
 
+        // analyzes the operand *, ^, /, :, r
         if (operand == '*') {
             result *= fac;
         } else if (operand == '^') {
             result = ::std::pow(result, fac);
         } else if (operand == '/' || this->currentChar() == ':') {
-            // if division by 0 return error
+            // if division by 0 throw error
             if (fac == 0) {
                 std::cerr << "Division by zero is not allowed!" << std::endl;
                 throw std::overflow_error("Division by zero is not allowed!");
             }
             result /= fac;
         } else if (operand == 'r') {
-            // if division by 0 return error
+            // if exponent is 0 throw error
             if (result == 0) {
                 std::cerr << "Exponent cannot be zero!" << std::endl;
                 throw std::overflow_error("The Exponent cannot be zero!");
@@ -131,7 +129,6 @@ double Calculation::equation() {
     return result;
 }
 
-//starts the calculation
 double Calculation::equate() {
     double result = this->equation();
     while (this->currentChar() == '+' || this->currentChar() == '-') {
